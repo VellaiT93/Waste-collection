@@ -1,0 +1,16 @@
+CREATE TABLE wastecollection.users (
+	userId int2 PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	userName varchar(256) UNIQUE NOT NULL,
+	userPassword varchar(256) NOT NULL,
+    userUid varchar(256) NOT NULL, 
+    userEmail varchar(256) NOT NULL
+);
+
+CREATE TABLE wastecollection.ranked (
+	id int4 PRIMARY KEY AUTO_INCREMENT NOT NULL, 
+	score int4 NOT NULL, 
+	time int4 NOT NULL, 
+	userUid varchar(256) UNIQUE NOT NULL, 
+	userId int2 NOT NULL, 
+	userName varchar(256) NOT NULL
+);
